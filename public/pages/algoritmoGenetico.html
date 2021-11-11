@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <title>Algoritmo genético</title>
+</head>
+
+<body>
+    <!-- Image and text -->
+    <nav class="navbar navbar-dark bg-primary">
+        <a class="navbar-brand">
+            <img src="../assets/img/logo.png" width="30" height="30" class="d-inline-block align-top">
+            Algoritmo Genético
+        </a>
+    </nav>
+
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col">
+                <div class="card bg-dark elevation-1 border-left-success">
+                    <div class="card-header">
+                        <h3 class="text-white">Resultados</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="card border-left-info bg-dark">
+                            <div class="row">
+                                <div class="col-2 elevation-1">
+                                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist"
+                                        aria-orientation="vertical">
+                                        <a class="nav-link active" id="v-pills-home-tab" data-toggle="pill"
+                                            href="#v-pills-home" role="tab" aria-controls="v-pills-home"
+                                            aria-selected="true">Iteracioń 1</a>
+                                        <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" role="tab"
+                                            aria-controls="v-pills-home" aria-selected="true">Iteracioń 2</a>
+                                        <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" role="tab"
+                                            aria-controls="v-pills-home" aria-selected="true">Iteracioń 3</a>
+                                        <a class="nav-link" id="v-pills-home-tab" data-toggle="pill" role="tab"
+                                            aria-controls="v-pills-home" aria-selected="true">Iteracioń 4</a>
+                                    </div>
+                                </div>
+                                <div class="col-10">
+                                    <div class="tab-content text-white" id="v-pills-tabContent">
+                                        <div class="tab-pane fade show active border-secondary" id="v-pills-home"
+                                            role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                            <table class="table table-bordered table-dark table-responsive table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col"># Individuo</th>
+                                                        <th scope="col">Población inicial</th>
+                                                        <th scope="col">Cromosoma</th>
+                                                        <th scope="col">F(x)</th>
+                                                        <th scope="col">Fitness</th>
+                                                        <th scope="col">% Acumulado</th>
+                                                        <th scope="col">Ruleta</th>
+                                                        <th scope="col">Mejores padres</th>
+                                                        <th scope="col">Cromosoma</th>
+                                                        <th scope="col">Cruce de puntos en N</th>
+                                                        <th scope="col">Hijos</th>
+                                                        <th scope="col">Bit de mutación</th>
+                                                        <th scope="col">Mutado</th>
+                                                        <th scope="col">Hijo resultante</th>
+                                                        <th scope="col">Hijos con penalización</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="text-center" id="tableBodyAlgoritmoGenenetico"></tbody>
+                                                <tfoot id="tableFooterAlgoritmoGenetico"></tfoot>
+                                            </table>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/jquery/dist/jquery.slim.js"></script>
+    <script src="../assets/popper.js/dist/popper.min.js"></script>
+    <script src="../assets/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../scripts/algoritmoGenetico/AlgoritmoGenetico.class.js"></script>
+    <script src="../scripts/algoritmoGenetico/calculos.js"></script>
+</body>
+
+</html>
