@@ -1,10 +1,10 @@
 class AlgoritmoGenetico {
 
-    constructor(cntSujetos, min, max, funcion) {
+    constructor(cntSujetos, min, max, expresion) {
         this.cntSujetos = cntSujetos;
         this.min = min;
         this.max = max;
-        this.funcion = funcion;
+        this.expresion = expresion;
     }
 
     inicializar() {
@@ -68,7 +68,7 @@ class AlgoritmoGenetico {
     }
 
     calcularFuncion(sujeto = new sujeto()) {
-        sujeto.funcion = Math.pow(sujeto.poblacion, 2)
+        sujeto.funcion = Number(math.simplify(this.expresion).evaluate({x:sujeto.poblacion}))
     }
 
     penalizarHijos() {
