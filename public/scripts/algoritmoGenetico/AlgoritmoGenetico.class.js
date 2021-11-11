@@ -13,6 +13,20 @@ class AlgoritmoGenetico {
         this.buscarMejoresPadres()
         this.penalizarHijos()
     }
+    asignarSujetos(poblaciones = []) {
+        this.sujetos = [];
+        this.total = 0;
+        poblaciones.forEach((poblacion,index) =>{
+            let sujeto = new Sujeto(index, poblacion);
+            this.calcularFuncion(sujeto)
+            this.total += sujeto.funcion;
+            this.sujetos.push(sujeto)
+
+        })
+        this.calculoPostCreacion()
+        this.buscarMejoresPadres()
+        this.penalizarHijos()
+    }
 
     crearSujetos() {
         this.sujetos = [];

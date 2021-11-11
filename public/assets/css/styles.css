@@ -10072,6 +10072,11 @@ body {
 .elevation-1 {
   box-shadow: 5px 10px 10px #000;
 }
+@media screen and (max-width: 756px) {
+  .elevation-1 {
+    box-shadow: none;
+  }
+}
 
 .border-left-primary {
   border-left: 0.25rem solid #0c3c6e !important;
