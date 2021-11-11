@@ -13,6 +13,7 @@ class AlgoritmoGenetico {
         this.buscarMejoresPadres()
         this.penalizarHijos()
     }
+
     asignarSujetos(poblaciones = []) {
         this.sujetos = [];
         this.total = 0;
@@ -82,8 +83,6 @@ class AlgoritmoGenetico {
     obtenerResultados() {
         return this.sujetos;
     }
-
-
 }
 
 class Sujeto {
@@ -128,7 +127,7 @@ class Sujeto {
     generarHijo() {
         let padre = this.padre.cromosoma;
         let actual = this.cromosoma;
-        this.hijo = actual.substr(0, 4) + padre.substr(4, 7)
+        this.hijo = actual.substr(0,8-this.cruze)+ padre.substr(8-this.cruze,7)
     }
 
     mutarHijo() {
